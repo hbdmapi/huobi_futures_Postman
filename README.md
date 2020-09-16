@@ -28,6 +28,17 @@ In the postman menu,select
 
 Import -- Import File -- Choose Files -- huobi_future.postman_collection.json
 
+### Set Environment
+
+In the postman menu, Manage Environments:
+
+Add Environment:
+
+add "accessKey": xxx
+add "secretKey": yyy
+
+save.
+
 ## Signature Example
 
 ### Huobi Future
