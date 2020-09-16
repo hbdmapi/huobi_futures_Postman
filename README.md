@@ -4,16 +4,16 @@ You can import the json to your Postman and use this project.
 
 ### Huobi Future
 
-The DEMO now only contains the implementation of these interfaces: query contract info(api/v1/contract_contract_info),query account info(swap-api/v1/contract_account_info), query kline info(market/history/kline).
+The DEMO now only contains the implementation of these interfaces: query position info(api/v1/contract_position_info),query account info(swap-api/v1/contract_account_info), query kline info(market/history/kline).
 
 
 ### Huobi Swap
 
-The DEMO now only contains the implementation of these interfaces: query contract info(swap-api/v1/swap_contract_info),query account info(swap-api/v1/swap_account_info), query kline info(swap-ex/market/history/kline).
+The DEMO now only contains the implementation of these interfaces: query position info(swap-api/v1/swap_position_info),query account info(swap-api/v1/swap_account_info), query kline info(swap-ex/market/history/kline).
 
 ### Huobi Option
 
-The DEMO now only contains the implementation of these interfaces: query contract info(option-api/v1/option_contract_info),query account info(option-api/v1/option_account_info), query kline info(option-ex/market/history/kline).
+The DEMO now only contains the implementation of these interfaces: query position info(option-api/v1/option_position_info),query account info(option-api/v1/option_account_info), query kline info(option-ex/market/history/kline).
 
 
 ## Quick Start
