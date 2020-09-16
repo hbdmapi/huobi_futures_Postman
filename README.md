@@ -35,6 +35,7 @@ In the postman menu, Manage Environments:
 Add Environment:
 
 add "accessKey": xxx
+
 add "secretKey": yyy
 
 save.
