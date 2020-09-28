@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "25575d6e-800f-4ad4-8b91-098993cb0507",
-		"name": "huobi_usdt_swap Copy",
+		"name": "huobi_usdt_swap_online",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2069,7 +2069,7 @@
 					"raw": "{\"contract_code\": \"BTC-USDT\"}"
 				},
 				"url": {
-					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_fee?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_transfer_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -2079,7 +2079,7 @@
 					"path": [
 						"linear-swap-api",
 						"v1",
-						"swap_fee"
+						"swap_transfer_limit"
 					],
 					"query": [
 						{
