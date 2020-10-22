@@ -11,7 +11,7 @@ The DEMO now only contains the implementation of these interfaces: query positio
 
 The DEMO now only contains the implementation of these interfaces: query position info(swap-api/v1/swap_position_info),query account info(swap-api/v1/swap_account_info), query kline info(swap-ex/market/history/kline).
 
-## Huobi USDT Margined Swap
+### Huobi USDT Margined Swap
 
 All restful interfaces of USDT Swap have been included in the demos.
 
