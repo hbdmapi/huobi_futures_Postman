@@ -1,17 +1,641 @@
 {
 	"info": {
-		"_postman_id": "709a86e5-f46b-4015-8d4a-d77dbfd900a5",
-		"name": "huobi_future",
+		"_postman_id": "ff0fe59e-4057-4b20-b82a-da72e212eb1f",
+		"name": "huobi_futures",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "get_account_info",
+			"name": "contract_contract_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_contract_info?contract_code=BTC201225",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_contract_info"
+					],
+					"query": [
+						{
+							"key": "contract_code",
+							"value": "BTC201225"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_index?symbol=btc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_index"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "btc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_price_limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_price_limit?contract_code=BTC201225",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_price_limit"
+					],
+					"query": [
+						{
+							"key": "contract_code",
+							"value": "BTC201225"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_open_interest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_open_interest?contract_code=BTC201225",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_open_interest"
+					],
+					"query": [
+						{
+							"key": "contract_code",
+							"value": "BTC201225"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_delivery_price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_delivery_price?symbol=BTC",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_delivery_price"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_api_state",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_api_state?symbli=BTC",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_api_state"
+					],
+					"query": [
+						{
+							"key": "symbli",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market depth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/market/depth?symbol=BTC_NQ&type=step6",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"market",
+						"depth"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC_NQ"
+						},
+						{
+							"key": "type",
+							"value": "step6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market history kline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/market/history/kline?symbol=BTC_NQ&period=5min&size=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"market",
+						"history",
+						"kline"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC_NQ"
+						},
+						{
+							"key": "period",
+							"value": "5min"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market detail merged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/market/detail/merged?symbol=BTC_NQ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"market",
+						"detail",
+						"merged"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC_NQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market trade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/market/trade?symbol=BTC_NQ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"market",
+						"trade"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC_NQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market history trade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/market/history/trade?symbol=BTC_NQ&size=10",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"market",
+						"history",
+						"trade"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC_NQ"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_risk_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_risk_info?symbol=BTC",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_risk_info"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_insurance_fund",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_insurance_fund?symbol=BTC",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_insurance_fund"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_adjustfactor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_adjustfactor?symbol=BTC",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_adjustfactor"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_his_open_interest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_his_open_interest?symbol=BTC&contract_type=quarter&period=60min&size=10&amount_type=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_his_open_interest"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						},
+						{
+							"key": "contract_type",
+							"value": "quarter"
+						},
+						{
+							"key": "period",
+							"value": "60min"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "amount_type",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_elite_account_ratio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_elite_account_ratio?symbol=BTC&period=5min",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_elite_account_ratio"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						},
+						{
+							"key": "period",
+							"value": "5min"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_elite_position_ratio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_elite_position_ratio?symbol=BTC&period=5min",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_elite_position_ratio"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						},
+						{
+							"key": "period",
+							"value": "5min"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_liquidation_orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_liquidation_orders?symbol=BTC&trade_type=0&create_date=7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_liquidation_orders"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC"
+						},
+						{
+							"key": "trade_type",
+							"value": "0"
+						},
+						{
+							"key": "create_date",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market history index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/index/market/history/index?symbol=BTC-USD&period=60min&size=150",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"index",
+						"market",
+						"history",
+						"index"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC-USD"
+						},
+						{
+							"key": "period",
+							"value": "60min"
+						},
+						{
+							"key": "size",
+							"value": "150"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market history basis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hbdm.com/index/market/history/basis?symbol=BTC-USD&period=5min&size=7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"index",
+						"market",
+						"history",
+						"basis"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "BTC-USD"
+						},
+						{
+							"key": "period",
+							"value": "5min"
+						},
+						{
+							"key": "size",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_account_info",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f9d23a79-668f-4a31-bbb9-a98b6b7c936d",
+						"id": "c968ec2a-fe57-46f0-8a19-7e2b62822aa0",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -95,15 +719,20 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "https://api.hbdm.vn/api/v1/contract_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"raw": "https://api.hbdm.com/api/v1/contract_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
 					"protocol": "https",
 					"host": [
 						"api",
 						"hbdm",
-						"vn"
+						"com"
 					],
 					"path": [
 						"api",
@@ -137,12 +766,12 @@
 			"response": []
 		},
 		{
-			"name": "get_position_info",
+			"name": "contract_position_info",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f9d23a79-668f-4a31-bbb9-a98b6b7c936d",
+						"id": "b6ecb14b-6a0d-47ad-8a5a-0a242e3d6ae5",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -226,15 +855,20 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "https://api.hbdm.vn/api/v1/contract_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"raw": "https://api.hbdm.com/api/v1/contract_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
 					"protocol": "https",
 					"host": [
 						"api",
 						"hbdm",
-						"vn"
+						"com"
 					],
 					"path": [
 						"api",
@@ -268,12 +902,1508 @@
 			"response": []
 		},
 		{
-			"name": "get_klines",
+			"name": "contract_sub_account_list",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f9d23a79-668f-4a31-bbb9-a98b6b7c936d",
+						"id": "901eb13e-44e2-4af2-93c3-dfc7fc19dc44",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_sub_account_list?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_sub_account_list"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_sub_account_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2d62fa8f-25c4-4282-bd24-9a3a97c0ca8f",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_sub_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_sub_account_info"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_sub_position_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5a19c6cf-15f9-4311-b64c-37d82f9ff0d0",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_sub_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_sub_position_info"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_user_settlement_records",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "70323c6c-8e50-4ecf-a7a9-fa256f6b6c8d",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_user_settlement_records?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_user_settlement_records"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_order_limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "adf89efa-9266-42bf-8bb4-966fb3617bb1",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"order_price_type\":\"limit\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_order_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_order_limit"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_fee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "66d65b04-f482-4c67-8a4f-1e7cd05b33ba",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_fee?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_fee"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_transfer_limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b290ed86-8044-4044-a8a1-2b5132c5acf3",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_transfer_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_transfer_limit"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_position_limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "566dee47-afb2-4b01-a186-5d69e9c88ac2",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_position_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_position_limit"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_account_position_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3ca71bd6-5ca4-46e7-96f3-9ddec2630ee7",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_account_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_account_position_info"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_master_sub_transfer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3aa2d56b-d7cf-4af9-b8bd-43044913025f",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1,\"amount\":20,\"type\":\"sub_to_master\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_master_sub_transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_master_sub_transfer"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_master_sub_transfer_record",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d49f0927-20b9-42cc-ba03-a8a1a15ff86d",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"create_date\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_master_sub_transfer_record?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_master_sub_transfer_record"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_api_trading_status",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "52040cb8-8549-4317-b64a-4628d9634838",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -360,38 +2490,2500 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "https://api.hbdm.vn/market/history/kline?period=1min&size=200&symbol=BTC_CQ",
+					"raw": "https://api.hbdm.com/api/v1/contract_api_trading_status?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
 					"protocol": "https",
 					"host": [
 						"api",
 						"hbdm",
-						"vn"
+						"com"
 					],
 					"path": [
-						"market",
-						"history",
-						"kline"
+						"api",
+						"v1",
+						"contract_api_trading_status"
 					],
 					"query": [
 						{
-							"key": "period",
-							"value": "1min"
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
 						},
 						{
-							"key": "size",
-							"value": "200"
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
 						},
 						{
-							"key": "symbol",
-							"value": "BTC_CQ"
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_available_level_rate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dfb7f8d1-bc5c-4c16-adfd-c15e24d5af8d",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_available_level_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_available_level_rate"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dc3da998-9517-43b3-b1a6-e8ed98d7dccd",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract_code\":\"ada201225\",\n    \"contract_type\":\"quarter\",\n    \"direction\":\"BUY\",\n    \"lever_rate\":10,\n    \"offset\":\"OPEN\",\n    \"order_price_type\":\"post_only\",\n    \"price\":0.11,\n    \"symbol\":\"ada\",\n    \"volume\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_order"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_batchorder",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7973bb41-95cc-4dc3-a949-fd290d813c49",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orders_data\":[\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        },\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_batchorder?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_batchorder"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_cancel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0bb1042d-d5c7-4506-acbc-1c29471be248",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769206471832678400,769206471845261312\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_cancel"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_cancelall",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "01c93d9b-2b32-46cc-ab77-0e7901b1c98c",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"ada201225\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_cancelall"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_switch_lever_rate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d33467a0-c030-450d-8c6c-83ded06c8aed",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"lever_rate\":20}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_switch_lever_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_switch_lever_rate"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_order_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ae76ab8a-2d1d-4645-b43b-afec837d5aa7",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769210869635862528,769210869652639744\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_order_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_order_info"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_order_detail",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8e8f96b2-e19a-414e-84bf-3975d39f6bcf",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"order_id\":769210869635862528}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_order_detail?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_order_detail"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_openorders",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "57e3b691-c81e-4128-8e4f-80b57a01b3ac",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_openorders"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_hisorders",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e6bd72ef-a9c5-4aee-8bc3-05bc121b4816",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"type\":1,\"status\":0,\"create_date\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_hisorders"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_matchresults",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "60d8403c-60dd-457b-9dee-f99d965ea5c5",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"create_date\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_matchresults?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_matchresults"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lightning_close_position",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a7991bcc-291b-40de-98c0-d8f6def65ee7",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"contract_type\":\"quarter\",\"volume\":1,\"direction\":\"sell\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/lightning_close_position?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"lightning_close_position"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_trigger_order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "11e5e2a9-8b5e-466f-9f22-dbb5ba9f20ed",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n     \"contract_code\":\"ada201225\",\n     \"contract_type\":\"quarter\",\n     \"direction\":\"BUY\",\n     \"lever_rate\":10,\n     \"offset\":\"OPEN\",\n     \"order_price\":0.109,\n     \"order_price_type\":\"limit\",\n     \"symbol\":\"ada\",\n     \"trigger_price\":0.109,\n     \"trigger_type\":\"le\",\n     \"volume\":1\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_trigger_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_trigger_order"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_trigger_cancel",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b7e3f5e4-2559-4816-b3fe-b6321f9073ec",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"28312406\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_trigger_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_trigger_cancel"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_trigger_cancelall",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f0c4a7d4-d3dd-4219-ae0d-fd6656de8e93",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ADA\",\"contract_code\":\"ADA201225\",\"contract_type\":\"quarter\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_trigger_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_trigger_cancelall"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_trigger_openorders",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e8de8495-3fe3-4294-a3a5-150696e7abf3",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"ADA201225\",\"symbol\":\"ADA\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_trigger_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_trigger_openorders"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contract_trigger_hisorders",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "425706b3-45b2-4d1e-8daf-4c0ba8eb7a3f",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"symbol\":\"ADA\",\"trade_type\":0,\"status\":\"0\",\"create_date\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hbdm.com/api/v1/contract_trigger_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hbdm",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contract_trigger_hisorders"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aeb51238-042c-4e22-b93b-3831b6489be9",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"currency\":\"ada\",\"amount\":100,\"type\":\"pro-to-futures\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.huobi.pro/v1/futures/transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"huobi",
+						"pro"
+					],
+					"path": [
+						"v1",
+						"futures",
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
 						}
 					]
 				}
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
