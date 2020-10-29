@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c61508cd-8d5d-4aba-bad2-31ae5cd4a3fb",
+		"_postman_id": "80df5a10-2cf5-4c60-84c4-65a97a24b0d4",
 		"name": "huobi_coin_margined_swap",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -10,6 +10,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_contract_info?contract_code=btc-usd",
 					"protocol": "https",
@@ -38,6 +42,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_index?contract_code=btc-usd",
 					"protocol": "https",
@@ -66,6 +74,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_price_limit?contract_code=btc-usd",
 					"protocol": "https",
@@ -94,6 +106,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_open_interest?contract_code=btc-usd",
 					"protocol": "https",
@@ -122,6 +138,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-ex/market/depth?contract_code=btc-usd&type=step6",
 					"protocol": "https",
@@ -154,6 +174,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-ex/market/history/kline?contract_code=btc-usd&period=5min&size=2",
 					"protocol": "https",
@@ -191,6 +215,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-ex/market/detail/merged?contract_code=btc-usd",
 					"protocol": "https",
@@ -220,6 +248,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-ex/market/trade?contract_code=btc-usd",
 					"protocol": "https",
@@ -248,6 +280,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-ex/market/history/trade?contract_code=btc-usd&size=10",
 					"protocol": "https",
@@ -281,6 +317,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_risk_info?contract_code=btc-usd",
 					"protocol": "https",
@@ -309,6 +349,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_insurance_fund?contract_code=btc-usd",
 					"protocol": "https",
@@ -337,6 +381,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_adjustfactor?contract_code=btc-usd",
 					"protocol": "https",
@@ -365,6 +413,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_his_open_interest?contract_code=btc-usd&period=12hour&size=10&amount_type=1",
 					"protocol": "https",
@@ -405,6 +457,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_elite_account_ratio?contract_code=btc-usd&period=5min",
 					"protocol": "https",
@@ -437,6 +493,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_elite_position_ratio?contract_code=btc-usd&period=5min",
 					"protocol": "https",
@@ -469,6 +529,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_api_state?contract_code=btc-usd",
 					"protocol": "https",
@@ -497,6 +561,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_funding_rate?contract_code=btc-usd",
 					"protocol": "https",
@@ -525,6 +593,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.vn/swap-api/v1/swap_historical_funding_rate?contract_code=btc-usd",
 					"protocol": "https",
@@ -553,6 +625,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_liquidation_orders?contract_code=btc-usd&trade_type=0&create_date=7",
 					"protocol": "https",
@@ -589,6 +665,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/index/market/history/swap_premium_index_kline?contract_code=btc-usd&period=5min&size=10",
 					"protocol": "https",
@@ -626,6 +706,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/index/market/history/swap_estimated_rate_kline?contract_code=btc-usd&period=5min&size=10",
 					"protocol": "https",
@@ -663,6 +747,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/index/market/history/swap_basis?contract_code=btc-usd&period=5min&size=10",
 					"protocol": "https",
@@ -782,15 +870,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -918,15 +1008,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1054,15 +1146,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_account_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1190,15 +1284,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_sub_account_list?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1326,15 +1422,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"btc-usd\",\n\"sub_uid\":1}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"btc-usd\",\n\"sub_uid\":1}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_sub_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1462,15 +1560,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"btc-usd\",\n\"sub_uid\":1}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"btc-usd\",\n\"sub_uid\":1}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_sub_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1598,15 +1698,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_financial_record?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1734,15 +1836,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_user_settlement_records?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1870,15 +1974,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_available_level_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2006,15 +2112,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"order_price_type\":\"limit\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\"order_price_type\":\"limit\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_order_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2142,15 +2250,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_fee?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2278,15 +2388,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_transfer_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2414,15 +2526,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_position_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2550,15 +2664,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"sub_uid\":1,\n\"amount\":100,\n\"type\":\"sub_to_master\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"sub_uid\":1,\n\"amount\":100,\n\"type\":\"sub_to_master\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_master_sub_transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2686,15 +2802,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_master_sub_transfer_record?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2828,12 +2946,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_api_trading_status?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2961,15 +3074,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3097,15 +3212,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"orders_data\":[{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"},\n{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"}]}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"orders_data\":[{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"},\n{\"contract_code\":\"theta-usd\",\n\"price\":0.630,\n\"volume\":1,\n\"direction\":\"sell\",\n\"offset\":\"open\",\n\"lever_rate\":20,\n\"order_price_type\":\"limit\"}]}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_batchorder?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3233,15 +3350,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3369,15 +3488,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3505,15 +3626,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"lever_rate\":20}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"lever_rate\":20}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_switch_lever_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3641,15 +3764,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_order_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3777,15 +3902,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\n\"order_id\":768503271974985728}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_order_detail?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3913,15 +4040,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4049,15 +4178,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"trade_type\":0,\"type\":0,\"status\":0,\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\"trade_type\":0,\"type\":0,\"status\":0,\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4185,15 +4316,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"trade_type\":0,\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\"trade_type\":0,\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_matchresults?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4321,15 +4454,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ada-usd\",\"volume\":1,\"direction\":\"buy\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ada-usd\",\"volume\":1,\"direction\":\"buy\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_lightning_close_position?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4457,15 +4592,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"trigger_type\":\"ge\",\"trigger_price\":0.66,\"order_price\":0.66,\"volume\":20,\"direction\":\"sell\",\"offset\":\"open\",\"lever_rate\":20,\"order_price_type\":\"limit\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"contract_code\": \"theta-usd\",\n    \"trigger_type\": \"ge\",\n    \"trigger_price\": 0.66,\n    \"order_price\": 0.66,\n    \"volume\": 20,\n    \"direction\": \"sell\",\n    \"offset\": \"open\",\n    \"lever_rate\": 20,\n    \"order_price_type\": \"limit\"\n}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_trigger_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4593,15 +4730,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"order_id\":7002236}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\",\"order_id\":7002236}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_trigger_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4729,15 +4868,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_trigger_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4865,15 +5006,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"theta-usd\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_trigger_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -5001,15 +5144,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"theta-usd\",\"trade_type\":0,\"status\":0,\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"contract_code\": \"theta-usd\",\n    \"trade_type\": 0,\n    \"status\": 0,\n    \"create_date\": 10\n}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/swap-api/v1/swap_trigger_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -5137,15 +5282,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"from\":\"spot\",\"to\":\"swap\",\"currency\":\"theta\",\"amount\":100}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"from\": \"spot\",\n    \"to\": \"swap\",\n    \"currency\": \"theta\",\n    \"amount\": 100\n}"
 				},
 				"url": {
 					"raw": "https://api.huobi.pro/v2/account/transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -5186,6 +5333,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

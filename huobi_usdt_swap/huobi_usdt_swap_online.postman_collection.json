@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "25575d6e-800f-4ad4-8b91-098993cb0507",
+		"_postman_id": "fb8f8b9e-d0d5-4b16-953d-7ee5fa89a9c8",
 		"name": "huobi_usdt_swap_online",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -311,7 +311,14 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -971,7 +978,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\": \"BTC-USDT\",\"sub_uid\": 114392453}"
+					"raw": "{\"contract_code\": \"BTC-USDT\",\"sub_uid\": 1}"
 				},
 				"url": {
 					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_sub_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1190,7 +1197,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\": \"BTC-USDT\",\"sub_uid\": 114392453}"
+					"raw": "{\"contract_code\": \"BTC-USDT\",\"sub_uid\": 1}"
 				},
 				"url": {
 					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_sub_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2066,7 +2073,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{}"
+					"raw": ""
 				},
 				"url": {
 					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_fee?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2723,7 +2730,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"sub_uid\": 114392453,\n    \"asset\": \"USDT\",\n    \"from_margin_account\": \"BTC-USDT\",\n    \"to_margin_account\": \"BTC-USDT\",\n    \"amount\": 10,\n    \"type\": \"master_to_sub\"\n}"
+					"raw": "{\n    \"sub_uid\": 1,\n    \"asset\": \"USDT\",\n    \"from_margin_account\": \"BTC-USDT\",\n    \"to_margin_account\": \"BTC-USDT\",\n    \"amount\": 10,\n    \"type\": \"master_to_sub\"\n}"
 				},
 				"url": {
 					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_master_sub_transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -5686,6 +5693,144 @@
 						"linear-swap-api",
 						"v1",
 						"swap_trigger_hisorders"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f9d23a79-668f-4a31-bbb9-a98b6b7c936d",
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\": \"linear-swap\",\n    \"to\": \"spot\",\n    \"currency\": \"usdt\",\n    \"amount\": 10,\n    \"margin-account\":\"btc-usdt\"\n}"
+				},
+				"url": {
+					"raw": "https://api.huobi.pro/v2/account/transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"huobi",
+						"pro"
+					],
+					"path": [
+						"v2",
+						"account",
+						"transfer"
 					],
 					"query": [
 						{

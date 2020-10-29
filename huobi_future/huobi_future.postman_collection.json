@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ff0fe59e-4057-4b20-b82a-da72e212eb1f",
-		"name": "huobi_futures",
+		"_postman_id": "4dc74289-cff5-4f06-b201-ac090d97191b",
+		"name": "huobi_future",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -10,6 +10,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_contract_info?contract_code=BTC201225",
 					"protocol": "https",
@@ -38,6 +42,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_index?symbol=btc",
 					"protocol": "https",
@@ -66,6 +74,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_price_limit?contract_code=BTC201225",
 					"protocol": "https",
@@ -94,6 +106,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_open_interest?contract_code=BTC201225",
 					"protocol": "https",
@@ -122,6 +138,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_delivery_price?symbol=BTC",
 					"protocol": "https",
@@ -150,6 +170,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_api_state?symbli=BTC",
 					"protocol": "https",
@@ -178,6 +202,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/market/depth?symbol=BTC_NQ&type=step6",
 					"protocol": "https",
@@ -209,6 +237,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/market/history/kline?symbol=BTC_NQ&period=5min&size=10",
 					"protocol": "https",
@@ -245,6 +277,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/market/detail/merged?symbol=BTC_NQ",
 					"protocol": "https",
@@ -273,6 +309,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/market/trade?symbol=BTC_NQ",
 					"protocol": "https",
@@ -300,6 +340,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/market/history/trade?symbol=BTC_NQ&size=10",
 					"protocol": "https",
@@ -332,6 +376,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_risk_info?symbol=BTC",
 					"protocol": "https",
@@ -360,6 +408,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_insurance_fund?symbol=BTC",
 					"protocol": "https",
@@ -388,6 +440,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_adjustfactor?symbol=BTC",
 					"protocol": "https",
@@ -416,6 +472,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_his_open_interest?symbol=BTC&contract_type=quarter&period=60min&size=10&amount_type=1",
 					"protocol": "https",
@@ -460,6 +520,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_elite_account_ratio?symbol=BTC&period=5min",
 					"protocol": "https",
@@ -492,6 +556,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_elite_position_ratio?symbol=BTC&period=5min",
 					"protocol": "https",
@@ -524,6 +592,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_liquidation_orders?symbol=BTC&trade_type=0&create_date=7",
 					"protocol": "https",
@@ -560,6 +632,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/index/market/history/index?symbol=BTC-USD&period=60min&size=150",
 					"protocol": "https",
@@ -597,6 +673,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://api.hbdm.com/index/market/history/basis?symbol=BTC-USD&period=5min&size=7",
 					"protocol": "https",
@@ -716,15 +796,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -852,15 +934,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -988,15 +1072,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_sub_account_list?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1124,15 +1210,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_sub_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1260,15 +1348,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_sub_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1396,15 +1486,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_user_settlement_records?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1532,15 +1624,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"order_price_type\":\"limit\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"order_price_type\":\"limit\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_order_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1668,15 +1762,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_fee?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1804,15 +1900,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_transfer_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -1940,15 +2038,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_position_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2076,15 +2176,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_account_position_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2212,15 +2314,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1,\"amount\":20,\"type\":\"sub_to_master\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"sub_uid\":1,\"amount\":20,\"type\":\"sub_to_master\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_master_sub_transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2348,15 +2452,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_master_sub_transfer_record?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2490,12 +2596,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_api_trading_status?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2623,15 +2724,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_available_level_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2759,15 +2862,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"contract_code\":\"ada201225\",\n    \"contract_type\":\"quarter\",\n    \"direction\":\"BUY\",\n    \"lever_rate\":10,\n    \"offset\":\"OPEN\",\n    \"order_price_type\":\"post_only\",\n    \"price\":0.11,\n    \"symbol\":\"ada\",\n    \"volume\":10\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"contract_code\":\"ada201225\",\n    \"contract_type\":\"quarter\",\n    \"direction\":\"BUY\",\n    \"lever_rate\":10,\n    \"offset\":\"OPEN\",\n    \"order_price_type\":\"post_only\",\n    \"price\":0.11,\n    \"symbol\":\"ada\",\n    \"volume\":10\n}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -2895,15 +3000,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"orders_data\":[\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        },\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        }\n    ]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"orders_data\":[\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        },\n        {\n            \"contract_code\":\"ada201225\",\n            \"contract_type\":\"quarter\",\n            \"direction\":\"BUY\",\n            \"leverRate\":10,\n            \"offset\":\"OPEN\",\n            \"order_price_type\":\"post_only\",\n            \"price\":0.11,\n            \"symbol\":\"ada\",\n            \"volume\":1\n        }\n    ]\n}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_batchorder?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3031,15 +3138,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769206471832678400,769206471845261312\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769206471832678400,769206471845261312\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3167,15 +3276,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ada201225\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ada201225\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3303,15 +3414,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"lever_rate\":20}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"lever_rate\":20}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_switch_lever_rate?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3439,15 +3552,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769210869635862528,769210869652639744\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"769210869635862528,769210869652639744\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_order_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3575,15 +3690,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"order_id\":769210869635862528}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"order_id\":769210869635862528}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_order_detail?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3711,15 +3828,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3847,15 +3966,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"type\":1,\"status\":0,\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"type\":1,\"status\":0,\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -3983,15 +4104,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"trade_type\":0,\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_matchresults?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4119,15 +4242,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"contract_type\":\"quarter\",\"volume\":1,\"direction\":\"sell\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ada201225\",\"symbol\":\"ada\",\"contract_type\":\"quarter\",\"volume\":1,\"direction\":\"sell\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/lightning_close_position?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4255,15 +4380,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": " {\n     \"contract_code\":\"ada201225\",\n     \"contract_type\":\"quarter\",\n     \"direction\":\"BUY\",\n     \"lever_rate\":10,\n     \"offset\":\"OPEN\",\n     \"order_price\":0.109,\n     \"order_price_type\":\"limit\",\n     \"symbol\":\"ada\",\n     \"trigger_price\":0.109,\n     \"trigger_type\":\"le\",\n     \"volume\":1\n }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": " {\n     \"contract_code\":\"ada201225\",\n     \"contract_type\":\"quarter\",\n     \"direction\":\"BUY\",\n     \"lever_rate\":10,\n     \"offset\":\"OPEN\",\n     \"order_price\":0.109,\n     \"order_price_type\":\"limit\",\n     \"symbol\":\"ada\",\n     \"trigger_price\":0.109,\n     \"trigger_type\":\"le\",\n     \"volume\":1\n }"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_trigger_order?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4391,15 +4518,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ada\",\"order_id\":\"28312406\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ada\",\"order_id\":\"28312406\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_trigger_cancel?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4527,15 +4656,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ADA\",\"contract_code\":\"ADA201225\",\"contract_type\":\"quarter\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ADA\",\"contract_code\":\"ADA201225\",\"contract_type\":\"quarter\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_trigger_cancelall?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4663,15 +4794,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"contract_code\":\"ADA201225\",\"symbol\":\"ADA\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"contract_code\":\"ADA201225\",\"symbol\":\"ADA\"}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_trigger_openorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4799,15 +4932,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"symbol\":\"ADA\",\"trade_type\":0,\"status\":\"0\",\"create_date\":10}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"symbol\":\"ADA\",\"trade_type\":0,\"status\":\"0\",\"create_date\":10}"
 				},
 				"url": {
 					"raw": "https://api.hbdm.com/api/v1/contract_trigger_hisorders?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4935,15 +5070,17 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"currency\":\"ada\",\"amount\":100,\"type\":\"pro-to-futures\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\"currency\":\"ada\",\"amount\":100,\"type\":\"pro-to-futures\"}"
 				},
 				"url": {
 					"raw": "https://api.huobi.pro/v1/futures/transfer?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
@@ -4984,6 +5121,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
