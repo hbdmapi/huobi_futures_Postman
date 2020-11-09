@@ -4,21 +4,19 @@ You can import the json to your Postman and use this project.
 
 ### Huobi Future
 
-The DEMO now only contains the implementation of these interfaces: query position info(api/v1/contract_position_info),query account info(swap-api/v1/contract_account_info), query kline info(market/history/kline).
-
+All restful interfaces of Future have been included in the demos.
 
 ### Huobi Coin Margined Swap
 
-The DEMO now only contains the implementation of these interfaces: query position info(swap-api/v1/swap_position_info),query account info(swap-api/v1/swap_account_info), query kline info(swap-ex/market/history/kline).
+All restful interfaces of Coin Margined Swap have been included in the demos.
 
 ### Huobi USDT Margined Swap
 
-All restful interfaces of USDT Swap have been included in the demos.
+All restful interfaces of USDT Margined Swap have been included in the demos.
 
 ### Huobi Option
 
-The DEMO now only contains the implementation of these interfaces: query position info(option-api/v1/option_position_info),query account info(option-api/v1/option_account_info), query kline info(option-ex/market/history/kline).
-
+All restful interfaces of Option have been included in the demos.
 
 ## Quick Start
 
