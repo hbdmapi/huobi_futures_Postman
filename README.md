@@ -38,7 +38,11 @@ Add Environment:
 
 add "accessKey": xxx
 
-add "secretKey": yyy
+add "secretKey": xxx
+
+add "hostName": xxx(such as:api.hbdm.vn)
+
+add "prePath": xxx(such as:/linear-swap-api/v1)
 
 save.
 
