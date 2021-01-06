@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "391d1397-ab7f-4b9e-91bd-0222bfda5378",
+		"_postman_id": "598df960-9eb6-422d-898a-a5c4c0e63e75",
 		"name": "huobi_usdt_swap_online",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "6333d2eb-67c0-4578-bfd1-429b193b0bb9",
 								"exec": [
 									""
 								],
@@ -50,7 +49,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8e13d917-8b7b-4049-9abe-a88a427ab9a7",
 								"exec": [
 									""
 								],
@@ -85,7 +83,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "7c3f912b-5a59-4638-b63e-bede5266f720",
 								"exec": [
 									""
 								],
@@ -115,150 +112,11 @@
 					"response": []
 				},
 				{
-					"name": "swap_account_info",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "2ffdb73f-efa6-47b8-abc1-5dc119330a3b",
-								"exec": [
-									"// Get API Key from environment variable",
-									"var accessKey = pm.environment.get(\"accessKey\");",
-									"var secretKey = pm.environment.get(\"secretKey\");",
-									"",
-									"var signatureVersion = 2;",
-									"var signatureMethod = \"HmacSHA256\";",
-									"var timestamp = new Date().toISOString().slice(0, 19);",
-									"",
-									"// Get request detail form postman",
-									"var requestMethod = pm.request.method;",
-									"var queryParam = pm.request.url.query.members;",
-									"var host = pm.request.url.host.join(\".\");",
-									"var path = \"/\"+pm.request.url.path.join(\"/\");",
-									"",
-									"var queryList = {",
-									"    values: [],",
-									"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
-									"    put: function(k, v){",
-									"        var index = -1;",
-									"        for(var i = 0;i<this.values.length;i++){",
-									"            var key = this.values[i].split(\"=\")[0];",
-									"            ",
-									"            if(key==k){",
-									"                index = -1;",
-									"                break;",
-									"            }",
-									"        }",
-									"        var value = encodeURIComponent(v);",
-									"        if(index==-1){",
-									"            this.values.push(k+\"=\"+value);",
-									"        }else{",
-									"            this.values[index] = k+\"=\"+value;",
-									"        }",
-									"    },",
-									"    sortedValues: function(){",
-									"        return this.values.sort();",
-									"    },",
-									"    inSigkey: function(k){",
-									"        for(var i = 0; i<this.sigkey.length; i++){",
-									"            if(k == this.sigkey[i]){",
-									"                return true;",
-									"            }",
-									"        }",
-									"        return false",
-									"    }",
-									"};",
-									"",
-									"for(var i = 0;i<queryParam.length;i++){",
-									"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
-									"        continue;",
-									"    queryList.put(queryParam[i].key, queryParam[i].value);",
-									"}",
-									"queryList.put(\"Timestamp\",timestamp);",
-									"queryList.put(\"AccessKeyId\",accessKey);",
-									"queryList.put(\"SignatureMethod\",signatureMethod);",
-									"queryList.put(\"SignatureVersion\",signatureVersion);",
-									"    ",
-									"var payload = requestMethod.toUpperCase()+\"\\n\"+",
-									"            host.toLowerCase()+\"\\n\"+",
-									"            path+\"\\n\"+",
-									"            queryList.sortedValues().join(\"&\");",
-									"            ",
-									"console.log(payload);",
-									"",
-									"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
-									"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
-									"",
-									"pm.environment.set(\"accessKey\", accessKey);",
-									"pm.environment.set(\"signatureVersion\", signatureVersion);",
-									"pm.environment.set(\"signatureMethod\", signatureMethod);",
-									"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
-									"pm.environment.set(\"signature\", encodeURIComponent(signature));"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
-							"protocol": "http",
-							"host": [
-								"api",
-								"hbdm",
-								"vn"
-							],
-							"path": [
-								"linear-swap-api",
-								"v1",
-								"swap_account_info"
-							],
-							"query": [
-								{
-									"key": "AccessKeyId",
-									"value": "{{accessKey}}"
-								},
-								{
-									"key": "SignatureVersion",
-									"value": "{{signatureVersion}}"
-								},
-								{
-									"key": "SignatureMethod",
-									"value": "{{signatureMethod}}"
-								},
-								{
-									"key": "Timestamp",
-									"value": "{{timestamp}}"
-								},
-								{
-									"key": "Signature",
-									"value": "{{signature}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "account_info",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "63c7d3f7-4753-48ae-b175-68cf45fd23f6",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -286,7 +144,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -340,7 +198,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "1e160fd6-4797-4085-8fc7-f967352d953a",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -368,7 +225,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -422,7 +279,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "58ab378d-e9f2-43b6-bca1-6124e7e2fbc8",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -450,7 +306,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -504,7 +360,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "cd4f7de8-0ae1-4f8b-a8f6-a3bb6d92dda8",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -532,7 +387,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -586,7 +441,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8c784577-8aa1-406d-8a0f-a04c254d3c49",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -614,7 +468,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -668,7 +522,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "f063f62d-38dd-427c-9575-bc7e7c34f458",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -696,7 +549,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -750,7 +603,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "71a3b972-af22-4769-aa59-b92cdfc77d54",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -778,7 +630,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -832,7 +684,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "092e9c8f-ea1f-4508-91d0-ade4beb74594",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -860,7 +711,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -914,7 +765,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fc5e0a99-b04f-4423-9946-07a5fa6492f0",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -942,7 +792,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -996,7 +846,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "faf0221d-9bc1-4998-b4f3-ad2ade9cfbb8",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1024,7 +873,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1078,7 +927,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "e1526dbe-2e45-47b6-98e1-d28cef1e2763",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1106,7 +954,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1160,7 +1008,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "4c23b648-9647-4359-99ad-0328fd95c9aa",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1188,7 +1035,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1242,7 +1089,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "edd1fbc0-6a22-40db-82e1-00e809ea37d7",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1270,7 +1116,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1324,7 +1170,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "cd79c8e3-4e9b-47e8-9dec-926ec98941bf",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1352,7 +1197,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1406,7 +1251,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "038c9d3b-afae-4bc0-8dda-4aa6955dc51d",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1434,7 +1278,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1488,7 +1332,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0a998518-baa4-42ce-9a0b-900ee7320f77",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1516,7 +1359,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1570,7 +1413,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "2e01e189-e82e-45be-a93c-68bcfcb9c9de",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1598,7 +1440,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1652,7 +1494,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "72673586-b08d-4f4d-8293-5237b34ea5d7",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1680,7 +1521,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1734,7 +1575,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "20fbe978-8bb7-4e50-a875-ed5494e442ae",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1762,7 +1602,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1816,7 +1656,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8994e0a1-2111-437f-8042-bed3cc9c92bd",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1844,7 +1683,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1898,7 +1737,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "3af876e1-2762-4d27-8bb4-7ac5e01cbefa",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -1926,7 +1764,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -1980,7 +1818,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "aa74b713-d09c-418b-90d1-c5184ef61b89",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -2008,7 +1845,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -2062,7 +1899,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "bb36c85c-68b8-4a30-941f-69a22a6ae017",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -2090,7 +1926,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -2144,7 +1980,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "160c5584-07a2-4f5d-933b-fc6670d3ba14",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -2172,7 +2007,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -2226,7 +2061,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "4c9732aa-865d-45f7-8a44-a5918d93fb40",
 								"exec": [
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
@@ -2254,7 +2088,7 @@
 									"",
 									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
 									"",
-									"pm.collectionVariables.set(\"URLSIGN\",URLSIGN);"
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
 								],
 								"type": "text/javascript"
 							}
@@ -2302,8 +2136,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "swap_position_info",
@@ -2311,7 +2144,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ed55399b-27a5-4363-b3df-b242c0d50c76",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2392,7 +2224,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "dfdd27aa-25b5-4454-98d2-c5cd4170009b",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2530,7 +2361,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "5408fa50-8bd5-4fa5-9dc2-931493e1e694",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2611,7 +2441,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fefd6a92-75a7-4967-b134-081ec8d7651e",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2749,7 +2578,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "fed612f4-6ff9-4877-b2ad-862982d7d789",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2830,7 +2658,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "27b5c1ef-3b52-4f6f-8b75-3f13f069511e",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -2968,7 +2795,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "69aa083b-19e7-43f8-8c51-0b869fa6929e",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3049,7 +2875,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "019fedd5-fef4-4de7-9f00-001b07a00d82",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3187,7 +3012,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b6acfc3f-6752-4545-8565-42a8fcaee043",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3268,7 +3092,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f5fcd103-980a-4db1-8595-78bfde3fec4d",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3406,7 +3229,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "504720f8-25dc-4002-80a5-3d33adda3f5b",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3487,7 +3309,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "68669226-8da0-4b95-a5a4-f2336ccefd01",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3625,7 +3446,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b8855a99-f1f1-46b3-acf1-5ac9969586b7",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3706,7 +3526,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d565da3a-1adc-4397-84a7-a698f543ddc9",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3844,7 +3663,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "770b279e-d53d-4d9d-86d3-b97d203bcaa5",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -3925,7 +3743,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "db8c2785-4b69-4c59-9c27-aa62c0337deb",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4063,7 +3880,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "06e4353a-7c65-4038-94b7-bcea6a77a181",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4144,7 +3960,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "17d21074-6e2d-457f-8dcb-b28edf99c15c",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4277,12 +4092,148 @@
 			"response": []
 		},
 		{
+			"name": "swap_account_info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.hbdm.vn/linear-swap-api/v1/swap_account_info?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"hbdm",
+						"vn"
+					],
+					"path": [
+						"linear-swap-api",
+						"v1",
+						"swap_account_info"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "swap_transfer_limit",
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "0de9e428-e001-4931-b4a4-3ea7c0c3f0d8",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4363,7 +4314,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "660453ff-0113-406b-8390-02e9ec31ceab",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4501,7 +4451,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f6124dd8-aade-42e9-a7e9-030b6f23d298",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4582,7 +4531,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "74234100-b66c-4557-85e7-828726d80157",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4720,7 +4668,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "87d8243d-09ac-49b8-91df-3df13c191126",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4801,7 +4748,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d90c627c-a932-4f36-92e9-f18daffcd29e",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -4939,7 +4885,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "188dbcc6-a06e-4053-956e-8e62014962f2",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5020,7 +4965,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "21ab8934-f102-4223-bd9b-85e7d93cecab",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5158,7 +5102,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a565c815-7b8d-4fab-bdc3-0b5c4ba1ab70",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5239,7 +5182,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b419d856-c2bf-405b-a026-c3069e6872f7",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5377,7 +5319,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e95aa280-4648-40fd-9202-338aa073da83",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5458,7 +5399,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "de3f7f78-0ec2-4af7-be4b-4708773fd096",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5599,7 +5539,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "99c64bdc-63fa-4099-a957-e9a0562eeeeb",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5737,7 +5676,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "66202838-b204-4b0e-a0ca-0b620783dcbf",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -5875,7 +5813,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3ee79257-ae1e-4cfe-992f-a6a4cec7923d",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6013,7 +5950,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e9a48fb9-f83c-4838-bc69-5901a0a30b94",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6151,7 +6087,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d9d50334-883d-433f-9616-833902c81e6f",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6232,7 +6167,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "368bea50-1690-40da-9cc5-1e40972ffde0",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6370,7 +6304,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d1ac0524-1e6a-495c-86c8-e46425d2499b",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6508,7 +6441,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9ace49ea-e637-4405-8d07-f9913ea4ce13",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6646,7 +6578,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "47374cc0-c96e-4e6d-9866-60151c46e19b",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6784,7 +6715,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e96f7408-03e0-4c65-8a2b-01956f67c02a",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -6922,7 +6852,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e5163fff-0534-4acb-9fad-5a4853b32b77",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7060,7 +6989,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "7c4ba84f-53a1-445f-84f4-95fc96f699df",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7198,7 +7126,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "2a31e398-ddac-422f-b053-bb0d40a87ba4",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7336,7 +7263,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1155b45f-c103-4b77-9210-9d4516c853f1",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7474,7 +7400,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8cec3430-4996-4d6e-b33d-c70af19552d0",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7612,7 +7537,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3a6b0ae0-b628-44b6-b06c-d9acf79fce16",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7750,7 +7674,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c3d99009-4ff6-497a-8018-43e464283546",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -7888,7 +7811,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8243f076-f007-48b5-af2e-8bb6d29cfd3a",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8026,7 +7948,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e19fed7b-499b-467d-ab2e-70cf6418f6ad",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8138,7 +8059,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f774b657-0455-4628-9a67-bc8f96d627e4",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8256,7 +8176,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "dc27d3ed-f026-4225-9672-f8742c63261f",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8374,7 +8293,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "96362d87-0670-4871-b055-ebc93f200f78",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8492,7 +8410,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "feb39ad1-5746-4973-be06-aeb8b7bd31e5",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8614,7 +8531,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ab17f84f-0c8d-4c56-94f4-80b36ba0b316",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8741,7 +8657,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "159d8d86-7e50-403a-a62c-5ac4efa34770",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8860,7 +8775,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a222222d-ea65-4ee5-804e-5026cb220ceb",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -8978,7 +8892,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8621921d-cf7b-46e8-b187-9dcebf25dc98",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9096,7 +9009,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "d6e5d19b-6315-456d-9af5-909f2d144c1b",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9214,7 +9126,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "a84256b4-6245-438c-ad00-7a6abe1a3668",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9332,7 +9243,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "48e59ce2-6687-4263-964c-4baaa144cd0a",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9458,7 +9368,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "34a628ff-b48f-44f4-b834-f99992132375",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9584,7 +9493,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "6e6e677b-28aa-4b0b-8a29-ce8e62b0a735",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9706,7 +9614,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1e756641-1079-401f-860e-16807cdf1c68",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9818,7 +9725,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "79ab46a3-71df-41df-a0da-704ae5605f31",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -9936,7 +9842,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f66c1603-27a2-4c8b-8c88-c14e307cb21c",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -10054,7 +9959,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3b3bd729-8b48-4eb4-9efe-864c82aa3fbc",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -10180,7 +10084,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e45cd522-bead-45fc-8c3d-7df58cbcefd8",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -10307,7 +10210,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f162c694-1451-45fc-9a14-d91c961eade7",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -10434,7 +10336,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "929581d7-26e3-49da-a3e7-352f38769e9f",
 						"exec": [
 							"// Get API Key from environment variable",
 							"var accessKey = pm.environment.get(\"accessKey\");",
@@ -10558,10 +10459,8 @@
 	],
 	"variable": [
 		{
-			"id": "987c9dc3-3b5d-4c8c-a29f-e791c4492556",
 			"key": "URLSIGN",
 			"value": ""
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
