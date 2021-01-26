@@ -807,6 +807,68 @@
 			"response": []
 		},
 		{
+			"name": "batch_merged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{hostName}}/swap-ex/market/detail/batch_merged",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"swap-ex",
+						"market",
+						"detail",
+						"batch_merged"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swap_mark_price_ kline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{hostName}}/index/market/history/swap_mark_price_kline?contract_code=btc-usd&period=5min&size=50",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"index",
+						"market",
+						"history",
+						"swap_mark_price_kline"
+					],
+					"query": [
+						{
+							"key": "contract_code",
+							"value": "btc-usd"
+						},
+						{
+							"key": "period",
+							"value": "5min"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "swap_account_info",
 			"event": [
 				{

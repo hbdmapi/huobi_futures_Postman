@@ -743,6 +743,29 @@
 			"response": []
 		},
 		{
+			"name": "batch_merged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{hostName}}/market/detail/batch_merged",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"market",
+						"detail",
+						"batch_merged"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "contract_account_info",
 			"event": [
 				{
