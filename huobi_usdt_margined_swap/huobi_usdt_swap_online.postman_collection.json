@@ -25,9 +25,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_adjustfactor",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_adjustfactor",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_adjustfactor"
@@ -60,9 +60,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_transfer_state?margin_account=USDT",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_transfer_state?margin_account=USDT",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_transfer_state"
@@ -94,9 +94,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trade_state?contract_code=BTC-USDT",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trade_state?contract_code=BTC-USDT",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trade_state"
@@ -121,14 +121,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -175,9 +174,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_account_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_account_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_account_info"
@@ -202,14 +201,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -256,9 +254,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_position_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_position_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_position_info"
@@ -283,14 +281,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -337,9 +334,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_sub_account_list?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_sub_account_list?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_sub_account_list"
@@ -364,14 +361,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -418,9 +414,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_sub_account_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_sub_account_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_sub_account_info"
@@ -445,14 +441,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -499,9 +494,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_sub_position_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_sub_position_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_sub_position_info"
@@ -526,14 +521,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -580,9 +574,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_transfer_limit?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_transfer_limit?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_transfer_limit"
@@ -607,14 +601,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -661,9 +654,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_position_limit?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_position_limit?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_position_limit"
@@ -688,14 +681,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -742,9 +734,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_account_position_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_account_position_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_account_position_info"
@@ -769,14 +761,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -823,9 +814,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_available_level_rate?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_available_level_rate?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_available_level_rate"
@@ -994,14 +985,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1048,9 +1038,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_order?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_order?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_order"
@@ -1075,14 +1065,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1129,9 +1118,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_batchorder?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_batchorder?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_batchorder"
@@ -1156,14 +1145,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1210,9 +1198,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_cancel?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_cancel?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_cancel"
@@ -1237,14 +1225,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1291,9 +1278,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_cancelall?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_cancelall?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_cancelall"
@@ -1318,14 +1305,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1372,9 +1358,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_order_info?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_order_info?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_order_info"
@@ -1399,14 +1385,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1453,9 +1438,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_order_detail?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_order_detail?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_order_detail"
@@ -1480,14 +1465,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1534,9 +1518,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_switch_lever_rate?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_switch_lever_rate?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_switch_lever_rate"
@@ -1561,14 +1545,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1615,9 +1598,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_openorders?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_openorders?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_openorders"
@@ -1642,14 +1625,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1696,9 +1678,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_hisorders?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_hisorders?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_hisorders"
@@ -1723,14 +1705,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1777,9 +1758,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_matchresults?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_matchresults?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_matchresults"
@@ -1804,14 +1785,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1858,9 +1838,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_lightning_close_position?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_lightning_close_position?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_lightning_close_position"
@@ -1885,14 +1865,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -1939,9 +1918,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trigger_order?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trigger_order?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trigger_order"
@@ -1966,14 +1945,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -2020,9 +1998,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trigger_cancel?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trigger_cancel?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trigger_cancel"
@@ -2047,14 +2025,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -2101,9 +2078,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trigger_cancelall?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trigger_cancelall?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trigger_cancelall"
@@ -2128,14 +2105,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -2182,9 +2158,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trigger_openorders?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trigger_openorders?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trigger_openorders"
@@ -2209,14 +2185,13 @@
 									"var ak = pm.environment.get(\"accessKey\");",
 									"var sk = pm.environment.get(\"secretKey\");",
 									"var host = pm.environment.get(\"hostName\");",
-									"var prePath = pm.environment.get(\"prePath\");",
 									"",
 									"var timestamp = new Date().toISOString().slice(0, 19);",
 									"console.log(timestamp)",
 									"",
 									"// Get request detail form postman",
 									"var requestMethod = pm.request.method;",
-									"var path = prePath + \"/\"+pm.request.url.path.join(\"/\");",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
 									"",
 									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
 									"    ",
@@ -2263,9 +2238,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{hostName}}{{prePath}}/swap_cross_trigger_hisorders?{{URLSIGN}}",
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_trigger_hisorders?{{URLSIGN}}",
 							"host": [
-								"{{hostName}}{{prePath}}"
+								"{{hostName}}/linear-swap-api/v1"
 							],
 							"path": [
 								"swap_cross_trigger_hisorders"
