@@ -796,6 +796,74 @@
 			"response": []
 		},
 		{
+			"name": "mark_price_kline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostName}}/index/market/history/mark_price_kline?period=5min&size=1&symbol=btc_cq",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"index",
+						"market",
+						"history",
+						"mark_price_kline"
+					],
+					"query": [
+						{
+							"key": "period",
+							"value": "5min"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "symbol",
+							"value": "btc_cq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mark_price_kline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostName}}/index/market/history/mark_price_kline?period=5min&size=1&symbol=btc_cq",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"index",
+						"market",
+						"history",
+						"mark_price_kline"
+					],
+					"query": [
+						{
+							"key": "period",
+							"value": "5min"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "symbol",
+							"value": "btc_cq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "contract_balance_valuation",
 			"event": [
 				{
