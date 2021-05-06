@@ -14048,6 +14048,25 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "market bbo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostName}}/linear-swap-ex/market/bbo",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"linear-swap-ex",
+						"market",
+						"bbo"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [

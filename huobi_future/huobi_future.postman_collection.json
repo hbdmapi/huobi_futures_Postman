@@ -830,6 +830,24 @@
 			"response": []
 		},
 		{
+			"name": "market bbo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostName}}/market/bbo",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"market",
+						"bbo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "contract_balance_valuation",
 			"event": [
 				{

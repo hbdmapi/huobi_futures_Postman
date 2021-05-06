@@ -917,6 +917,31 @@
 			"response": []
 		},
 		{
+			"name": "market bbo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostName}}/swap-ex/market/bbo?contract_code=ltc-usd",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"swap-ex",
+						"market",
+						"bbo"
+					],
+					"query": [
+						{
+							"key": "contract_code",
+							"value": "ltc-usd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "swap_balance_valuation",
 			"event": [
 				{
