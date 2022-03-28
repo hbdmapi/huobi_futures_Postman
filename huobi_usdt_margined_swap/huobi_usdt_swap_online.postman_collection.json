@@ -1006,6 +1006,88 @@
 					"response": []
 				},
 				{
+					"name": "swap_cross_lever_position_limit",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var ak = pm.environment.get(\"accessKey\");",
+									"var sk = pm.environment.get(\"secretKey\");",
+									"var host = pm.environment.get(\"hostName\");",
+									"",
+									"var timestamp = new Date().toISOString().slice(0, 19);",
+									"console.log(timestamp)",
+									"",
+									"// Get request detail form postman",
+									"var requestMethod = pm.request.method;",
+									"var path = \"/\" + pm.request.url.path.join(\"/\");",
+									"",
+									"var signstr = \"AccessKeyId=\"+ak+\"&SignatureMethod=HmacSHA256&SignatureVersion=2&Timestamp=\"+encodeURIComponent(timestamp);",
+									"    ",
+									"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+									"            host+\"\\n\"+",
+									"            path+\"\\n\"+",
+									"            signstr",
+									"console.log(payload);",
+									"",
+									"var signatureBytes = CryptoJS.HmacSHA256(payload, sk);",
+									"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+									"console.log(signature);",
+									"",
+									"var URLSIGN = signstr+\"&Signature=\"+encodeURIComponent(signature)",
+									"",
+									"pm.environment.set(\"URLSIGN\",URLSIGN);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract_code\": \"BTC-USDT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostName}}/linear-swap-api/v1/swap_cross_available_level_rate?{{URLSIGN}}",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"linear-swap-api",
+								"v1",
+								"swap_cross_available_level_rate"
+							],
+							"query": [
+								{
+									"key": "{{URLSIGN}}",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "swap_cross_user_settlement_records",
 					"event": [
 						{
@@ -1122,6 +1204,150 @@
 								"linear-swap-api",
 								"v1",
 								"swap_cross_user_settlement_records"
+							],
+							"query": [
+								{
+									"key": "AccessKeyId",
+									"value": "{{accessKey}}"
+								},
+								{
+									"key": "SignatureVersion",
+									"value": "{{signatureVersion}}"
+								},
+								{
+									"key": "SignatureMethod",
+									"value": "{{signatureMethod}}"
+								},
+								{
+									"key": "Timestamp",
+									"value": "{{timestamp}}"
+								},
+								{
+									"key": "Signature",
+									"value": "{{signature}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "swap_cross_switch_position_mode",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// Get API Key from environment variable",
+									"var accessKey = pm.environment.get(\"accessKey\");",
+									"var secretKey = pm.environment.get(\"secretKey\");",
+									"var url=pm.environment.get(\"hostName\");",
+									"",
+									"var signatureVersion = 2;",
+									"var signatureMethod = \"HmacSHA256\";",
+									"var timestamp = new Date().toISOString().slice(0, 19);",
+									"",
+									"// Get request detail form postman",
+									"var requestMethod = pm.request.method;",
+									"var queryParam = pm.request.url.query.members;",
+									"if(url!=null){",
+									"    var host=url;",
+									"    console.log(host);",
+									"}else{",
+									"    var host = pm.request.url.host.join(\".\");",
+									"    console.log(host);",
+									"}",
+									"var path = \"/\"+pm.request.url.path.join(\"/\");",
+									"",
+									"var queryList = {",
+									"    values: [],",
+									"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+									"    put: function(k, v){",
+									"        var index = -1;",
+									"        for(var i = 0;i<this.values.length;i++){",
+									"            var key = this.values[i].split(\"=\")[0];",
+									"",
+									"            if(key==k){",
+									"                index = -1;",
+									"                break;",
+									"            }",
+									"        }",
+									"        var value = encodeURIComponent(v);",
+									"        if(index==-1){",
+									"            this.values.push(k+\"=\"+value);",
+									"        }else{",
+									"            this.values[index] = k+\"=\"+value;",
+									"        }",
+									"    },",
+									"    sortedValues: function(){",
+									"        return this.values.sort();",
+									"    },",
+									"    inSigkey: function(k){",
+									"        for(var i = 0; i<this.sigkey.length; i++){",
+									"            if(k == this.sigkey[i]){",
+									"                return true;",
+									"            }",
+									"        }",
+									"        return false",
+									"    }",
+									"};",
+									"",
+									"for(var i = 0;i<queryParam.length;i++){",
+									"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+									"        continue;",
+									"    queryList.put(queryParam[i].key, queryParam[i].value);",
+									"}",
+									"",
+									"queryList.put(\"Timestamp\",timestamp);",
+									"queryList.put(\"AccessKeyId\",accessKey);",
+									"queryList.put(\"SignatureMethod\",signatureMethod);",
+									"queryList.put(\"SignatureVersion\",signatureVersion);",
+									"",
+									"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+									"            host.toLowerCase()+\"\\n\"+",
+									"            path+\"\\n\"+",
+									"            queryList.sortedValues().join(\"&\");",
+									"            ",
+									"console.log(payload);",
+									"",
+									"",
+									"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+									"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+									"",
+									"pm.environment.set(\"accessKey\", accessKey);",
+									"pm.environment.set(\"signatureVersion\", signatureVersion);",
+									"pm.environment.set(\"signatureMethod\", signatureMethod);",
+									"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+									"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"margin_account\": \"usdt\",\"position_mode\":\"single_side\"\n}"
+						},
+						"url": {
+							"raw": "https://{{hostName}}/linear-swap-api/v1/swap_cross_switch_position_mode?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"linear-swap-api",
+								"v1",
+								"swap_cross_switch_position_mode"
 							],
 							"query": [
 								{
@@ -6397,6 +6623,229 @@
 			"response": []
 		},
 		{
+			"name": "swap_lever_position_limit",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"var url=pm.environment.get(\"hostName\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"if(url!=null){",
+							"    var host=url;",
+							"    console.log(host);",
+							"}else{",
+							"    var host = pm.request.url.host.join(\".\");",
+							"    console.log(host);",
+							"}",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"var host = pm.request.url.host.join(\".\");",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"            ",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"    ",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"contract_code\":\"btc-usdt\"}"
+				},
+				"url": {
+					"raw": "{{hostName}}/linear-swap-api/v1/swap_lever_position_limit?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"linear-swap-api",
+						"v1",
+						"swap_lever_position_limit"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "swap_order_limit",
 			"event": [
 				{
@@ -8389,6 +8838,150 @@
 						"linear-swap-api",
 						"v1",
 						"swap_api_trading_status"
+					],
+					"query": [
+						{
+							"key": "AccessKeyId",
+							"value": "{{accessKey}}"
+						},
+						{
+							"key": "SignatureVersion",
+							"value": "{{signatureVersion}}"
+						},
+						{
+							"key": "SignatureMethod",
+							"value": "{{signatureMethod}}"
+						},
+						{
+							"key": "Timestamp",
+							"value": "{{timestamp}}"
+						},
+						{
+							"key": "Signature",
+							"value": "{{signature}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swap_switch_position_mode",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get API Key from environment variable",
+							"var accessKey = pm.environment.get(\"accessKey\");",
+							"var secretKey = pm.environment.get(\"secretKey\");",
+							"var url=pm.environment.get(\"hostName\");",
+							"",
+							"var signatureVersion = 2;",
+							"var signatureMethod = \"HmacSHA256\";",
+							"var timestamp = new Date().toISOString().slice(0, 19);",
+							"",
+							"// Get request detail form postman",
+							"var requestMethod = pm.request.method;",
+							"var queryParam = pm.request.url.query.members;",
+							"if(url!=null){",
+							"    var host=url;",
+							"    console.log(host);",
+							"}else{",
+							"    var host = pm.request.url.host.join(\".\");",
+							"    console.log(host);",
+							"}",
+							"var path = \"/\"+pm.request.url.path.join(\"/\");",
+							"",
+							"var queryList = {",
+							"    values: [],",
+							"    sigkey: [\"AccessKeyId\", \"SignatureVersion\", \"SignatureMethod\", \"Timestamp\", \"Signature\"],",
+							"    put: function(k, v){",
+							"        var index = -1;",
+							"        for(var i = 0;i<this.values.length;i++){",
+							"            var key = this.values[i].split(\"=\")[0];",
+							"",
+							"            if(key==k){",
+							"                index = -1;",
+							"                break;",
+							"            }",
+							"        }",
+							"        var value = encodeURIComponent(v);",
+							"        if(index==-1){",
+							"            this.values.push(k+\"=\"+value);",
+							"        }else{",
+							"            this.values[index] = k+\"=\"+value;",
+							"        }",
+							"    },",
+							"    sortedValues: function(){",
+							"        return this.values.sort();",
+							"    },",
+							"    inSigkey: function(k){",
+							"        for(var i = 0; i<this.sigkey.length; i++){",
+							"            if(k == this.sigkey[i]){",
+							"                return true;",
+							"            }",
+							"        }",
+							"        return false",
+							"    }",
+							"};",
+							"",
+							"for(var i = 0;i<queryParam.length;i++){",
+							"    if(queryParam[i].disabled||queryList.inSigkey(queryParam[i].key))",
+							"        continue;",
+							"    queryList.put(queryParam[i].key, queryParam[i].value);",
+							"}",
+							"",
+							"queryList.put(\"Timestamp\",timestamp);",
+							"queryList.put(\"AccessKeyId\",accessKey);",
+							"queryList.put(\"SignatureMethod\",signatureMethod);",
+							"queryList.put(\"SignatureVersion\",signatureVersion);",
+							"",
+							"var payload = requestMethod.toUpperCase()+\"\\n\"+",
+							"            host.toLowerCase()+\"\\n\"+",
+							"            path+\"\\n\"+",
+							"            queryList.sortedValues().join(\"&\");",
+							"            ",
+							"console.log(payload);",
+							"",
+							"",
+							"var signatureBytes = CryptoJS.HmacSHA256(payload, secretKey);",
+							"var signature = CryptoJS.enc.Base64.stringify(signatureBytes);",
+							"",
+							"pm.environment.set(\"accessKey\", accessKey);",
+							"pm.environment.set(\"signatureVersion\", signatureVersion);",
+							"pm.environment.set(\"signatureMethod\", signatureMethod);",
+							"pm.environment.set(\"timestamp\", encodeURIComponent(timestamp));",
+							"pm.environment.set(\"signature\", encodeURIComponent(signature));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"margin_account\":\"BTC-USDT\",\n    \"position_mode\": \"single_side\"\n}"
+				},
+				"url": {
+					"raw": "https://{{hostName}}/linear-swap-api/v1/swap_switch_position_mode?AccessKeyId={{accessKey}}&SignatureVersion={{signatureVersion}}&SignatureMethod={{signatureMethod}}&Timestamp={{timestamp}}&Signature={{signature}}",
+					"protocol": "https",
+					"host": [
+						"{{hostName}}"
+					],
+					"path": [
+						"linear-swap-api",
+						"v1",
+						"swap_switch_position_mode"
 					],
 					"query": [
 						{
