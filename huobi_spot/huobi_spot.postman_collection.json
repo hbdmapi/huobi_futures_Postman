@@ -32,7 +32,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}/v1/common/symbols",
+							"raw": "https://{{hostName}}/v1/common/symbols",
+							"protocol": "https",
 							"host": [
 								"{{hostName}}"
 							],
@@ -51,7 +52,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}/v1/common/currencys",
+							"raw": "https://{{hostName}}/v1/common/currencys",
+							"protocol": "https",
 							"host": [
 								"{{hostName}}"
 							],
@@ -70,7 +72,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{hostName}}/v2/reference/currencies?currency=usdt",
+							"raw": "https://{{hostName}}/v2/reference/currencies",
+							"protocol": "https",
 							"host": [
 								"{{hostName}}"
 							],
@@ -78,12 +81,6 @@
 								"v2",
 								"reference",
 								"currencies"
-							],
-							"query": [
-								{
-									"key": "currency",
-									"value": "usdt"
-								}
 							]
 						}
 					},
@@ -103,6 +100,169 @@
 								"v1",
 								"common",
 								"timestamp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/currencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{hostName}}/v2/settings/common/currencies",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v2",
+								"settings",
+								"common",
+								"currencies"
+							],
+							"query": [
+								{
+									"key": "ts",
+									"value": "1641868016287",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/symbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostName}}/v2/settings/common/symbols",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v2",
+								"settings",
+								"common",
+								"symbols"
+							],
+							"query": [
+								{
+									"key": "ts",
+									"value": "1111",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/currencys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{hostName}}/v1/settings/common/currencys",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v1",
+								"settings",
+								"common",
+								"currencys"
+							],
+							"query": [
+								{
+									"key": "ts",
+									"value": "1641871003457",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/symbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{hostName}}/v1/settings/common/symbols",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v1",
+								"settings",
+								"common",
+								"symbols"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/market-symbols",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{hostName}}/v1/settings/common/market-symbols?symbols=btcusdt",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v1",
+								"settings",
+								"common",
+								"market-symbols"
+							],
+							"query": [
+								{
+									"key": "symbols",
+									"value": "btcusdt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "common/chains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{hostName}}/v1/settings/common/chains?currency=btc",
+							"protocol": "https",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"v1",
+								"settings",
+								"common",
+								"chains"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "btc"
+								},
+								{
+									"key": "show-desc",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
